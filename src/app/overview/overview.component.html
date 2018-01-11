@@ -1,0 +1,27 @@
+<app-header></app-header>
+<!-- <div class="col-xs-12">
+    <div class="row text-center top-buffer">
+        <button type="button" class="btn btn-lg btn-danger">Omvormer Breda</button>
+        <img
+        src="https://www.sprangers.nl/web/files/modules/news//origineel/10888.jpg"
+        alt="kiekje"
+        class="img-responsive"
+        style="max-width: 250px;">
+    </div>
+
+    <div class="row text-center top-buffer">
+        <button type="button" class="btn btn-lg btn-danger">Omvormer den Bosch</button>
+    </div>
+    <div class="row text-center top-buffer">
+        <button type="button" class="btn btn-lg btn-danger">Omvormer Tilburg</button>
+    </div> -->
+    <div class="row text-center">
+        <app-overview-list (overviewWasSelected)="selectedOverview = $event"></app-overview-list>
+    </div>
+    <div class="row text-center top-buffer">
+        <app-overview-detail *ngIf="selectedOverview; else infoText" [overview] = "selectedOverview"></app-overview-detail>
+        <ng-template #infoText>
+            <p>Selecteer een omvormer!</p>
+        </ng-template>
+    </div>
+<!-- </div> -->

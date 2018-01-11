@@ -1,0 +1,23 @@
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" (click)="toggleState()">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- #1 -->
+            <a class="navbar-brand">Project Manager</a>
+        </div>
+        <div class="collapse navbar-collapse" [ngClass]="{ 'in': isIn }">
+            <ul class="nav navbar-nav">
+                <li routerLinkActive='active'><a routerLink = '/'>Omvormers</a></li>
+                <li routerLinkActive='active'>
+                    <a routerLink = '/locaties'>Locaties</a>
+                </li>
+            </ul>
+        </div>
+        <!-- #2 -->
+    </div>
+</nav>
