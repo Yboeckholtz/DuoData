@@ -15,13 +15,16 @@
     <div class="row text-center top-buffer">
         <button type="button" class="btn btn-lg btn-danger">Omvormer Tilburg</button>
     </div> -->
+    <div class="container">
     <div class="row text-center">
         <app-overview-list (overviewWasSelected)="selectedOverview = $event"></app-overview-list>
     </div>
-    <div class="row text-center top-buffer">
+    <hr class="style13">
+    <div class="row text-center">
         <app-overview-detail *ngIf="selectedOverview; else infoText" [overview] = "selectedOverview"></app-overview-detail>
         <ng-template #infoText>
             <p>Selecteer een omvormer!</p>
         </ng-template>
     </div>
+</div>
 <!-- </div> -->

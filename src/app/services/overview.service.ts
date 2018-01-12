@@ -41,24 +41,6 @@ export class OverviewService {
       });
   }
 
-  // private readoverviews() {
-    
-  //   console.log('readoverviews');
-    
-  //   this.http.get(this.serverUrl)
-  //       .map((response: Response) => {
-  //       console.log('map');
-  //       const overviews: Overview[] = response.json();
-  //       return overviews;
-  //       })
-  //       .subscribe((overviews: Overview[]) => {
-  //       console.log('subscribe');
-  //       this.overviews = overviews;
-  //       console.dir(this.overviews);
-  //       this.overviewsChanged.next(this.overviews.slice());
-  //       });
-  //     }
-
   public getOverview(index: number): Promise<Overview> {
     console.log('overview ophalen met id');
     return this.http.get(this.serverUrl + '/' + this.overviews[index]._id, { headers: this.headers })
@@ -110,7 +92,7 @@ public updateOverview(index: number, newOverview : Overview){
 
   public addOverview(overview: Overview) {
     console.log('overview opslaan');
-    this.http.post(this.serverUrl, { name: overview.name, hoeveelheid: overview.hoeveelheid })
+    this.http.post(this.serverUrl, { name: overview.name, description: overview.description, hoeveelheid: overview.hoeveelheid })
       .toPromise()
       .then( () => {
         console.log("overview toegevoegd")

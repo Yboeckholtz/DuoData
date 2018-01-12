@@ -2,10 +2,12 @@ export class Overview {
     
         public _id
         public name: string;
-        public hoeveelheid: string;       
+        public description: string;
+        public hoeveelheid: number;       
           
-        constructor(name: string, hoev: string) {
+        constructor(name: string, desc:string, hoev: number) {
             this.name = name;
+            this.description = desc;
             this.hoeveelheid = hoev;
         }
     }   

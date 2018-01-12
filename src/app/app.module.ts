@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import { OverviewComponent } from './overview/overview.component';
 import { HeaderComponent } from './header/header.component';
 import { LocatiesComponent} from './locaties/locaties.component';
+import { HttpClientModule } from '@angular/common/http'; 
+import { HttpModule } from '@angular/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { OverviewService } from '../app/services/overview.service';
 import { AppComponent } from './app.component';
@@ -30,7 +33,10 @@ const appRoutes: Routes = [
         ],
     imports: [
       BrowserModule,
-      RouterModule.forRoot(appRoutes)
+      RouterModule.forRoot(appRoutes),
+      HttpModule,
+      FormsModule,
+      ReactiveFormsModule
     ],
     providers: [
       OverviewService
