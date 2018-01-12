@@ -7,7 +7,7 @@ import { OverviewService} from '../../../services/overview.service';
   templateUrl: './overview-detail-edit.component.html'
 //   styleUrls: ['./overview-detail-edit.component.css']
 })
-export class OverviewDetailComponent implements OnInit {
+export class OverviewDetailEditComponent implements OnInit {
   @Input() overview: Overview;
 
   constructor() { }
